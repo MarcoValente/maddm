@@ -15,7 +15,7 @@ docker pull valentem1992/maddm:latest
 ```
 Once the download is finishes you are ready to go! 😄
 
-## Run
+## Run example
 After having pulled the `valentem1992/maddm:latest` image from the docker-hub repository, you can run the maddm test run by typing in your terminal
 ```
 docker-compose run maddm
@@ -40,5 +40,5 @@ quit
 ```
 This output shows you if this simulated model is consistent with the relic dark matter density estimation and also if the model is allowed by direct DM experiments constraints. The madgraph output will be stored in the `output` directory.
 
-## Explore
+## Explore the code
 You can see the commands passed to MadDM inside the [scripts/maddm-test.py](scripts/maddm-test.py) script. Enjoy MadDM! 😁
