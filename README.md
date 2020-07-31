@@ -8,15 +8,15 @@ This repository is based on the nice tutorial by Gopolang Mohlabeng
 ### Install docker
 In order to run this tutorial you will need to have `docker` and `docker-compose` installed on your machine. In case you don't have docker installed, you can easily do that by following the instructions on the docker [installation webpage](https://docs.docker.com/engine/install/ubuntu/).
 
-### Pull the maddm docker image from docker-hub
+### Pull the MadDM docker image from docker-hub
 Once [docker is installed and is running on your machine, pull the `maddm` repository from [docker-hub](https://hub.docker.com) by typing in your terminal:
 ```
 docker pull valentem1992/maddm:latest
 ```
-Once the download is finishes you are ready to go! 😄
+Once the download finishes you are ready to go! 😄
 
 ## Run test example
-After having pulled the `valentem1992/maddm:latest` image from the docker-hub repository, you can run the maddm test run by typing in your terminal
+After having pulled the `valentem1992/maddm:latest` image from the docker-hub repository, you can run the MadDM test run by typing in your terminal
 ```
 docker-compose run maddm
 ```
@@ -38,7 +38,7 @@ INFO: Results written in: /home/hep/MG5_aMC_v2_6_3_2/output/DMsimp_s_spin0_MD/ou
 quit
 quit
 ```
-This output shows you if this simulated model is consistent with the relic dark matter density estimation and also if the model is allowed by direct DM experiments constraints. The madgraph output will be stored in the `output` directory.
+This output shows you if the simulated model is consistent with the relic dark matter density estimation and also if the model is allowed by direct DM experiments constraints. The Madgraph output will be stored in the `output` directory.
 
 ### Explore the code
 You can see the commands passed to MadDM inside the [scripts/maddm-test.py](scripts/maddm-test.py) script.
@@ -49,8 +49,8 @@ If you have pulled the `valentem1992/maddm:latest` image from the docker-hub
 you can continue with the next steps. Otherwise, follow the instructions in the
 [Installation](#installation) section before continuing.
 
-The test example shown above is very simple but it does not allow you to modify the parameters of your model in order to test the validity of the Dark Matter model.
-This is why you will have to proceed in two steps:
+The test example shown above is very simple but it does not allow you to modify the parameters of your Dark Matter model.
+In order to do this, you will have to proceed in two steps:
 
 1. Run the creation of the MadDM output where the `param_card.dat` configuration file will be created. You can directly modify masses and couplings of the DM sector in this file before launching the MadDM calculation.
 2. Run the MadDM calculation using the values modified inside `param_card.dat`.
@@ -96,4 +96,4 @@ INFO: SigmaN_SD_p         All DM = 2.01e-62       ALLOWED       Pico60 ul       
 INFO: SigmaN_SD_n         All DM = 2.00e-62       ALLOWED       Lux2017 ul       = 2.77e-41 
 INFO: Results written in: /home/hep/MG5_aMC_v2_6_3_2/output/DMsimp_s_spin0_MD/output/run_01/MadDM_results.txt
 ```
-It seems that this model set with these parameters is not excluded by direct DM experiments bu it can still not satisfy the observed relic DM density! 😔 Try with more parameters and enyoy MadDM!
+It seems that the Dark Matter model set with these parameters is not excluded by direct DM experiments but it can still not satisfy the observed relic DM density! 😔 Try with more parameters and enjoy MadDM!
